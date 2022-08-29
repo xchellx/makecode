@@ -29,16 +29,23 @@
 #include <stdio.h>
 
 char* csprintf_s(char* format, ...) {
-    va_list args;
-    va_start(args, format);
-    
-    int buffSz = vsnprintf(NULL, 0, format, args);
-    
-    char* buff = (char*) malloc(buffSz + 1);
-    vsnprintf(buff, buffSz + 1, format, args);
-    
-    va_end(args);
-    
-    return buff;
+    if (format != NULL) {
+        va_list args;
+
+        va_start(args, format);
+        int buffSz = vsnprintf(NULL, 0, format, args);
+        va_end(args);
+
+        char* buff = (char*) malloc(buffSz + 1);
+        if (buff != NULL) {
+            va_start(args, format);
+            vsnprintf(buff, buffSz + 1, format, args);
+            va_end(args);
+
+            return buff;
+        } else
+            return NULL;
+    } else
+        return NULL;
 }
 #endif
