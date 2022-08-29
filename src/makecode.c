@@ -180,18 +180,18 @@ char* GME_GetHeader(Game game, GameRegion region) {
         case GME_MP1:
         case GME_MP2:
         case GME_MP3:
-            return "Metroid Prime: Trilogy";
+            return "Metroid Prime Trilogy";
         case GME_MENU_MP1:
         case GME_MP1_GCN:
         case GME_MP1R1_GCN:
         case GME_MP1R2_GCN:
             return "Metroid Prime";
         case GME_MENU_MP2:
-            return "Metroid Prime 2: Dark Echoes";
+            return "Metroid Prime 2 Dark Echoes";
         case GME_MP3_SA:
-            return "Metroid Prime 3: Corruption";
+            return "Metroid Prime 3 Corruption";
         case GME_MP2_GCN:
-            return region == GMR_NTSCJ ? "Metroid Prime 2: Dark Echoes" : "Metroid Prime 2: Echoes";
+            return region == GMR_NTSCJ ? "Metroid Prime 2 Dark Echoes" : "Metroid Prime 2 Echoes";
         default:
             return "Invalid";
     }
@@ -919,7 +919,7 @@ int main(int argc, char** argv) {
                "  CDE_FRIENDVOUCHERS\n"
                "  CDE_UNLOCKHYPERMODE\n"
                "  CDE_ALL\n"
-               "Formats:\n"
+               "Games:\n"
                "  GME_MENU\n"
                "  GME_MENU_MP1\n"
                "  GME_MENU_MP2\n"

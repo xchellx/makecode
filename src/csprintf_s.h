@@ -32,7 +32,7 @@ char* csprintf_s(char* format, ...) {
     va_list args;
     va_start(args, format);
     
-    ssize_t buffSz = vsnprintf(NULL, 0, format, args);
+    int buffSz = vsnprintf(NULL, 0, format, args);
     
     char* buff = malloc(buffSz + 1);
     vsnprintf(buff, buffSz + 1, format, args);
