@@ -34,7 +34,7 @@ char* csprintf_s(char* format, ...) {
     
     int buffSz = vsnprintf(NULL, 0, format, args);
     
-    char* buff = malloc(buffSz + 1);
+    char* buff = (char*) malloc(buffSz + 1);
     vsnprintf(buff, buffSz + 1, format, args);
     
     va_end(args);
