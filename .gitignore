@@ -1,0 +1,4 @@
+# compilation output
+/dst/*.*
+# log output
+/**/*.log
