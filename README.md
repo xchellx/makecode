@@ -18,7 +18,8 @@ Code Name\ncode`), and raw (`code`).
 Simply run `./compile.sh` at root directory of project. This script uses GCC to compile the sources. It also computes
 the md5, sha1, and sha256 hash of the compiled result afterwards using `md5sum`, `sha1sum`, and `sha256sum`. You can
 pass `asan` as the first argument to the script to build a debug build with AddressSanitizer (this isn't supported on a
-Windows build). For building for Windows, run `./compile.sh` with MSYS2 MinGW x64 or run `.\compile.bat`.
+Windows build) with all warnings to be printed. For building for Windows, run `./compile.sh` with MSYS2 MinGW x64 or
+run `.\compile.bat`.
 
 ## Credits
 - Shio, SirMangler, and many others for their work on PrimeHack, a modification of Dolphin Emulator to allow for FPS

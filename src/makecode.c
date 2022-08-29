@@ -359,6 +359,9 @@ int printcode(Code code, Game game, GameRegion region, CodeFormat format, uint8_
                         val_version_mp1 = 0x0002;
                         
                         break;
+                    default:
+                        fprintf(stderr, "Invalid game specified.");
+                        return MCS_INVLDARG;
                 }
             } else if (region == GMR_PAL) {
                 val_id1  = 0x474D; // GM
@@ -387,6 +390,9 @@ int printcode(Code code, Game game, GameRegion region, CodeFormat format, uint8_
             }
             
             break;
+        default:
+            fprintf(stderr, "Invalid game specified.");
+            return MCS_INVLDARG;
     }
     
     uint32_t addr_exception_hook = 0x80000048,
@@ -891,6 +897,9 @@ blr
             runppcasm(10, hm_ppcasm);
             
             break;
+        default:
+            fprintf(stderr, "Invalid code specified.");
+            return MCS_INVLDARG;
     }
     
     endifv(0, (addr_memstart >> 16), (addr_memstart >> 16));

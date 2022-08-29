@@ -5,7 +5,7 @@ if [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ] || [ "$(expr substr $(u
     OUTEXT=".exe"
 elif [ $# -gt 0 ]; then
     if [ "$1" == "asan" ]; then
-        ASAN="-fsanitize=address -g"
+        ASAN="-fsanitize=address -g -Wall"
     fi
 fi
 if [ ! -d "./dst" ]; then mkdir ./dst ; fi
